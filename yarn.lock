@@ -1352,6 +1352,13 @@
   resolved "https://registry.npmjs.org/@popperjs/core/-/core-2.11.8.tgz"
   integrity sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==
 
+"@radix-ui/number@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@radix-ui/number/-/number-1.0.1.tgz#644161a3557f46ed38a042acf4a770e826021674"
+  integrity sha512-T5gIdVO2mmPW3NNhjNgEP3cqMXjXL9UbO0BzWcXfvdBs+BohbQxvd/K5hSVKmn9/lbTdsQVKbUcP5WLCwvUbBg==
+  dependencies:
+    "@babel/runtime" "^7.13.10"
+
 "@radix-ui/primitive@1.0.1":
   version "1.0.1"
   resolved "https://registry.npmjs.org/@radix-ui/primitive/-/primitive-1.0.1.tgz"
@@ -1561,6 +1568,22 @@
     "@radix-ui/react-primitive" "1.0.3"
     "@radix-ui/react-use-callback-ref" "1.0.1"
     "@radix-ui/react-use-controllable-state" "1.0.1"
+
+"@radix-ui/react-scroll-area@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@radix-ui/react-scroll-area/-/react-scroll-area-1.0.5.tgz#01160c6893f24a2ddb5aa399ae5b3ba84ad4d3cc"
+  integrity sha512-b6PAgH4GQf9QEn8zbT2XUHpW5z8BzqEc7Kl11TwDrvuTrxlkcjTD5qa/bxgKr+nmuXKu4L/W5UZ4mlP/VG/5Gw==
+  dependencies:
+    "@babel/runtime" "^7.13.10"
+    "@radix-ui/number" "1.0.1"
+    "@radix-ui/primitive" "1.0.1"
+    "@radix-ui/react-compose-refs" "1.0.1"
+    "@radix-ui/react-context" "1.0.1"
+    "@radix-ui/react-direction" "1.0.1"
+    "@radix-ui/react-presence" "1.0.1"
+    "@radix-ui/react-primitive" "1.0.3"
+    "@radix-ui/react-use-callback-ref" "1.0.1"
+    "@radix-ui/react-use-layout-effect" "1.0.1"
 
 "@radix-ui/react-separator@^1.0.3":
   version "1.0.3"
@@ -2325,6 +2348,13 @@
   version "20.11.10"
   resolved "https://registry.npmjs.org/@types/node/-/node-20.11.10.tgz"
   integrity sha512-rZEfe/hJSGYmdfX9tvcPMYeYPW2sNl50nsw4jZmRcaG0HIAb0WYEpsB05GOb53vjqpyE9GUhlDQ4jLSoB5q9kg==
+  dependencies:
+    undici-types "~5.26.4"
+
+"@types/node@>=8.1.0":
+  version "20.11.30"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.11.30.tgz#9c33467fc23167a347e73834f788f4b9f399d66f"
+  integrity sha512-dHM6ZxwlmuZaRmUPfv1p+KrdD1Dci04FbdEm/9wEMouFqxYoFl5aMkt0VMAUtYRQDyYvD41WJLukhq/ha3YuTw==
   dependencies:
     undici-types "~5.26.4"
 
@@ -3151,6 +3181,17 @@ call-bind@^1.0.0, call-bind@^1.0.2, call-bind@^1.0.4, call-bind@^1.0.5:
     get-intrinsic "^1.2.1"
     set-function-length "^1.1.1"
 
+call-bind@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/call-bind/-/call-bind-1.0.7.tgz#06016599c40c56498c18769d2730be242b6fa3b9"
+  integrity sha512-GHTSNSYICQ7scH7sZ+M2rFopRoLh8t2bLSW6BbgrtLsahOIB5iyAVJf9GjWK3cYTDaMj4XdBpM1cA6pIS0Kv2w==
+  dependencies:
+    es-define-property "^1.0.0"
+    es-errors "^1.3.0"
+    function-bind "^1.1.2"
+    get-intrinsic "^1.2.4"
+    set-function-length "^1.2.1"
+
 call-me-maybe@^1.0.1:
   version "1.0.2"
   resolved "https://registry.npmjs.org/call-me-maybe/-/call-me-maybe-1.0.2.tgz"
@@ -3809,6 +3850,15 @@ define-data-property@^1.0.1, define-data-property@^1.1.1:
     gopd "^1.0.1"
     has-property-descriptors "^1.0.0"
 
+define-data-property@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/define-data-property/-/define-data-property-1.1.4.tgz#894dc141bb7d3060ae4366f6a0107e68fbe48c5e"
+  integrity sha512-rBMvIzlpA8v6E+SJZoo++HAYqsLrkg7MSfIinMPFhmkorw7X+dOXVJQs+QT69zGkzMyfDnIMN2Wid1+NbL3T+A==
+  dependencies:
+    es-define-property "^1.0.0"
+    es-errors "^1.3.0"
+    gopd "^1.0.1"
+
 define-properties@^1.1.3, define-properties@^1.2.0, define-properties@^1.2.1:
   version "1.2.1"
   resolved "https://registry.npmjs.org/define-properties/-/define-properties-1.2.1.tgz"
@@ -4132,6 +4182,13 @@ es-abstract@^1.22.1:
     typed-array-length "^1.0.4"
     unbox-primitive "^1.0.2"
     which-typed-array "^1.1.13"
+
+es-define-property@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/es-define-property/-/es-define-property-1.0.0.tgz#c7faefbdff8b2696cf5f46921edfb77cc4ba3845"
+  integrity sha512-jxayLKShrEqqzJ0eumQbVhTYQM27CfT1T35+gCgDFoL82JLsXqTJ76zv6A0YLOgEnLUMvLzsDsGIrl8NFpT2gQ==
+  dependencies:
+    get-intrinsic "^1.2.4"
 
 es-errors@^1.3.0:
   version "1.3.0"
@@ -4641,7 +4698,7 @@ file-entry-cache@^6.0.1:
   dependencies:
     flat-cache "^3.0.4"
 
-file-loader@6.2.0:
+file-loader@6.2.0, file-loader@^6.2.0:
   version "6.2.0"
   resolved "https://registry.npmjs.org/file-loader/-/file-loader-6.2.0.tgz"
   integrity sha512-qo3glqyTa61Ytg4u73GultjHGjdRyig3tG6lPtyX/jOEJvHif9uB0/OCI2Kif6ctF3caQTW2G5gym21oAsI4pw==
@@ -4841,6 +4898,17 @@ get-intrinsic@^1.0.2, get-intrinsic@^1.1.1, get-intrinsic@^1.1.3, get-intrinsic@
   resolved "https://registry.npmjs.org/get-intrinsic/-/get-intrinsic-1.2.2.tgz"
   integrity sha512-0gSo4ml/0j98Y3lngkFEot/zhiCeWsbYIlZ+uZOVgzLyLaUw7wxUL+nCTP0XJvJg1AXulJRI3UJi8GsbDuxdGA==
   dependencies:
+    function-bind "^1.1.2"
+    has-proto "^1.0.1"
+    has-symbols "^1.0.3"
+    hasown "^2.0.0"
+
+get-intrinsic@^1.2.4:
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/get-intrinsic/-/get-intrinsic-1.2.4.tgz#e385f5a4b5227d449c3eabbad05494ef0abbeadd"
+  integrity sha512-5uYhsJH8VJBTv7oslg4BznJYhDoRI6waYCxMmCdnTrcCrHA/fCFKoTFz2JKKE0HdDFUF7/oQuhzumXJK7paBRQ==
+  dependencies:
+    es-errors "^1.3.0"
     function-bind "^1.1.2"
     has-proto "^1.0.1"
     has-symbols "^1.0.3"
@@ -5082,6 +5150,13 @@ has-property-descriptors@^1.0.0, has-property-descriptors@^1.0.1:
   integrity sha512-VsX8eaIewvas0xnvinAe9bw4WfIeODpGYikiWYLH+dma0Jw6KHYqWiWfhQlgOVK8D6PvjubK5Uc4P0iIhIcNVg==
   dependencies:
     get-intrinsic "^1.2.2"
+
+has-property-descriptors@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/has-property-descriptors/-/has-property-descriptors-1.0.2.tgz#963ed7d071dc7bf5f084c5bfbe0d1b6222586854"
+  integrity sha512-55JNKuIW+vq4Ke1BjOTjM2YctQIvCT7GFzHwmfZPGo5wnrgkid0YQtnAleFSqumZm4az3n2BS+erby5ipJdgrg==
+  dependencies:
+    es-define-property "^1.0.0"
 
 has-proto@^1.0.1:
   version "1.0.1"
@@ -6786,10 +6861,10 @@ pause@0.0.1:
   resolved "https://registry.npmjs.org/pause/-/pause-0.0.1.tgz"
   integrity sha512-KG8UEiEVkR3wGEb4m5yZkVCzigAD+cVEJck2CzYZO37ZGJfctvVptVO192MwrtPhzONn6go8ylnOdMhKqi4nfg==
 
-payload@^2.11.2:
-  version "2.11.2"
-  resolved "https://registry.yarnpkg.com/payload/-/payload-2.11.2.tgz#d774a4736d6a5ab0fea4d4c555dd825ce534c1e2"
-  integrity sha512-UaruSsw7nFOzLurBjPWIHiDzGuTIGEK5UrEEfHagJnYe6xUP3/cg44qD+RQNb5D1FkV7x/B+ha8Ci7YVdz9eAA==
+payload@^2.11.1:
+  version "2.11.1"
+  resolved "https://registry.npmjs.org/payload/-/payload-2.11.1.tgz"
+  integrity sha512-uaPSUbmTpYbRAhewjrr8psRKDwbE1KWYJvg21Qxf5iDBzLe3D401SIE1erAQwIv5zeHA6RgLB7YjN8p+qzVTPA==
   dependencies:
     "@date-io/date-fns" "2.16.0"
     "@dnd-kit/core" "6.0.8"
@@ -7661,6 +7736,13 @@ qs@6.11.2, qs@^6.9.1:
   dependencies:
     side-channel "^1.0.4"
 
+qs@^6.11.0:
+  version "6.12.0"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.12.0.tgz#edd40c3b823995946a8a0b1f208669c7a200db77"
+  integrity sha512-trVZiI6RMOkO476zLGaBIzszOdFPnCCXHPG9kn0yuS1uz6xdVxPfZdB3vUig9pxPFDM9BRAgz/YUIVQ1/vuiUg==
+  dependencies:
+    side-channel "^1.0.6"
+
 qs@~6.4.0:
   version "6.4.1"
   resolved "https://registry.npmjs.org/qs/-/qs-6.4.1.tgz"
@@ -8267,6 +8349,18 @@ set-function-length@^1.1.1:
     gopd "^1.0.1"
     has-property-descriptors "^1.0.1"
 
+set-function-length@^1.2.1:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/set-function-length/-/set-function-length-1.2.2.tgz#aac72314198eaed975cf77b2c3b6b880695e5449"
+  integrity sha512-pgRc4hJ4/sNjWCSS9AmnS40x3bNMDTknHgL5UaMBTMyJnU90EgWh1Rz+MC9eFu4BuN/UwZjKQuY/1v3rM7HMfg==
+  dependencies:
+    define-data-property "^1.1.4"
+    es-errors "^1.3.0"
+    function-bind "^1.1.2"
+    get-intrinsic "^1.2.4"
+    gopd "^1.0.1"
+    has-property-descriptors "^1.0.2"
+
 set-function-name@^2.0.0, set-function-name@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npmjs.org/set-function-name/-/set-function-name-2.0.1.tgz"
@@ -8322,6 +8416,16 @@ side-channel@^1.0.4:
     call-bind "^1.0.0"
     get-intrinsic "^1.0.2"
     object-inspect "^1.9.0"
+
+side-channel@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/side-channel/-/side-channel-1.0.6.tgz#abd25fb7cd24baf45466406b1096b7831c9215f2"
+  integrity sha512-fDW/EZ6Q9RiO8eFG8Hj+7u/oW+XrPTIChwCOM2+th2A6OblDtYYIpve9m+KvI9Z4C9qSEXlaGR6bTEYHReuglA==
+  dependencies:
+    call-bind "^1.0.7"
+    es-errors "^1.3.0"
+    get-intrinsic "^1.2.4"
+    object-inspect "^1.13.1"
 
 sift@16.0.1:
   version "16.0.1"
@@ -8637,6 +8741,14 @@ strip-json-comments@~2.0.1:
   resolved "https://registry.npmjs.org/strip-json-comments/-/strip-json-comments-2.0.1.tgz"
   integrity sha512-4gB8na07fecVVkOI6Rs4e7T6NOTki5EmL7TUduTs6bu3EdnSycntVJ4re8kgZA+wx9IueI2Y11bfbgwtzuE0KQ==
 
+stripe@^14.21.0:
+  version "14.21.0"
+  resolved "https://registry.yarnpkg.com/stripe/-/stripe-14.21.0.tgz#6b984b06c16765ca08fb86b9185fe4ea0a8409fd"
+  integrity sha512-PFmpl35Myn6UDdVLTHcuppdbkPVvlQfkMHOmgGZh5QOdSUxVmvz090Z4obLg8ta1MNs1PNpzr9i7E39iAIv07A==
+  dependencies:
+    "@types/node" ">=8.1.0"
+    qs "^6.11.0"
+
 strnum@^1.0.5:
   version "1.0.5"
   resolved "https://registry.npmjs.org/strnum/-/strnum-1.0.5.tgz"
@@ -8746,6 +8858,11 @@ swc-minify-webpack-plugin@^2.1.0:
   version "2.1.1"
   resolved "https://registry.npmjs.org/swc-minify-webpack-plugin/-/swc-minify-webpack-plugin-2.1.1.tgz"
   integrity sha512-/9ud/libNWUC5p71vXWhW/O2Nc0essW8D9pY4P4ol0ceM8OcFbNr41R9YFqTkmktqUL2t0WwXau+FkR4T1+PJA==
+
+swiper@^11.0.7:
+  version "11.0.7"
+  resolved "https://registry.npmjs.org/swiper/-/swiper-11.0.7.tgz"
+  integrity sha512-cDfglW1B6uSmB6eB6pNmzDTNLmZtu5bWWa1vak0RU7fOI9qHjMzl7gVBvYSl34b0RU2N11HxxETJqQ5LeqI1cA==
 
 tabbable@^5.3.3:
   version "5.3.3"
@@ -9189,7 +9306,7 @@ use-sidecar@^1.1.2:
     detect-node-es "^1.1.0"
     tslib "^2.0.0"
 
-use-sync-external-store@^1.2.0:
+use-sync-external-store@1.2.0, use-sync-external-store@^1.2.0:
   version "1.2.0"
   resolved "https://registry.npmjs.org/use-sync-external-store/-/use-sync-external-store-1.2.0.tgz"
   integrity sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==
@@ -9538,3 +9655,10 @@ zod@^3.22.4:
   version "3.22.4"
   resolved "https://registry.npmjs.org/zod/-/zod-3.22.4.tgz"
   integrity sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==
+
+zustand@^4.5.2:
+  version "4.5.2"
+  resolved "https://registry.yarnpkg.com/zustand/-/zustand-4.5.2.tgz#fddbe7cac1e71d45413b3682cdb47b48034c3848"
+  integrity sha512-2cN1tPkDVkwCy5ickKrI7vijSjPksFRfqS6237NzT0vqSsztTNnQdHw9mmN7uBdk3gceVXU0a+21jFzFzAc9+g==
+  dependencies:
+    use-sync-external-store "1.2.0"

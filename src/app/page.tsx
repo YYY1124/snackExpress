@@ -1,4 +1,6 @@
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
+import ProductReel from "@/components/ProductReel";
+import ProductReal from "@/components/ProductReel";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { ArrowDownToLine, CheckCircle, Leaf, Link } from "lucide-react";
 
@@ -26,14 +28,13 @@ export default function Home() {
     <MaxWidthWrapper>
       <div className='py-20 mx-auto text-center flex flex-col items-center max-w-3xl'>
         <h1 className='text-4xl font-bold tracking-tight text-grey-900 sm:text-6xl'>
-          Your marketplace for high-quality{' '}
+          Snacks
         <span className='text-blue-600'>
-          assets
+          Express
         </span>
-        .
         </h1>
         <p className='mt-6 text-lg max-w-prose text-muted-foreground'>
-          Weclome to DigitalHippo. Every asset on our platform is verified by our team.
+          Weclome to SnackExpress. Every asset on our platform is verified by us!
         </p>
         <div className='flex flex-col sm:flex-row gap-4 mt-6'>
           <a href='/products' className={buttonVariants()}>Browse Trending</a>
@@ -42,6 +43,7 @@ export default function Home() {
       </div>
 
       {/* TODO: List products */}
+      <ProductReel query={{sort:"desc",limit:4}} title='Brand new' href='/products'/>
       <section className='border-t border-gray-200 bg-gray-50'>
         <MaxWidthWrapper className='py-20'>
           <div className='grid grid0cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-0 '>

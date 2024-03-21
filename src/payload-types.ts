@@ -9,6 +9,10 @@
 export interface Config {
   collections: {
     users: User;
+    products: Product;
+    media: Media;
+    product_files: ProductFile;
+    orders: Order;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
   };
@@ -21,6 +25,7 @@ export interface Config {
 export interface User {
   id: string;
   role: 'admin' | 'user';
+  comments?: string | null;
   updatedAt: string;
   createdAt: string;
   email: string;
@@ -33,6 +38,112 @@ export interface User {
   loginAttempts?: number | null;
   lockUntil?: string | null;
   password: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "products".
+ */
+export interface Product {
+  id: string;
+  user?: (string | null) | User;
+  name: string;
+  description?: string | null;
+  price: number;
+  category:
+    | 'ui_kits'
+    | 'chips_and_crisps'
+    | 'Cookies_and_Biscuits'
+    | 'candy_and_chocolate'
+    | 'nuts_and_seeds'
+    | 'popcorn'
+    | 'cracks'
+    | 'pretzels'
+    | 'dried_fruits'
+    | 'granola_bars_and_energy_bars'
+    | 'jerky';
+  product_files: string | ProductFile;
+  approvedForSale?: ('pending' | 'approved' | 'denied') | null;
+  priceId?: string | null;
+  stripeId?: string | null;
+  images: {
+    image: string | Media;
+    id?: string | null;
+  }[];
+  likes?: (string | User)[] | null;
+  dislikes?: (string | User)[] | null;
+  comments?: string[] | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "product_files".
+ */
+export interface ProductFile {
+  id: string;
+  user?: (string | null) | User;
+  updatedAt: string;
+  createdAt: string;
+  url?: string | null;
+  filename?: string | null;
+  mimeType?: string | null;
+  filesize?: number | null;
+  width?: number | null;
+  height?: number | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "media".
+ */
+export interface Media {
+  id: string;
+  user?: (string | null) | User;
+  updatedAt: string;
+  createdAt: string;
+  url?: string | null;
+  filename?: string | null;
+  mimeType?: string | null;
+  filesize?: number | null;
+  width?: number | null;
+  height?: number | null;
+  sizes?: {
+    thumbnail?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
+    card?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
+    tabel?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
+  };
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "orders".
+ */
+export interface Order {
+  id: string;
+  isPaid: boolean;
+  user: string | User;
+  products: (string | Product)[];
+  updatedAt: string;
+  createdAt: string;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
