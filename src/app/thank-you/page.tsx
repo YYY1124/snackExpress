@@ -56,7 +56,7 @@ const ThankYouPage= async({ searchParams }: PageProps )=>{
         <div className='hidden md:block h-80 overflow-hidden lg:absolute lg:h-full lg:w-1/2 lg:pr-4 xl:pr-12'>
                 <Image
                 fill
-                src='/checkout-thank-you.jpg'
+                src='/thank-you-template-design-3a33061c40e083afd98bf66e93ab5043_screen.jpeg'
                 className="h-full w-full object-cover object-center"
                 alt="thank you for your order"
                 />
@@ -142,7 +142,7 @@ const ThankYouPage= async({ searchParams }: PageProps )=>{
 
                         <div className='flex items-center justify-between border-t border-gray-200 pt-6 text-gray-900'>
                             <p className='text-base'>Total</p>
-                            <p className='text-base'>{formatPrice(orderTotal)+1}</p>
+                            <p className='text-base'>{formatPrice(orderTotal+1)}</p>
                         </div>
                 </div>
                 <div className='mt-16 border-t border-gray-200 py-6 text-right'>

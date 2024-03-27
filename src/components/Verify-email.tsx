@@ -30,7 +30,7 @@ export default function VerifyEmail({token}:VerifyEmailprops){
             <div className="flex h-full flex-col items-center justify-center">
                 <div className="relative mb-4 h-60 w-60 text-muted-foreground">
                     <Image 
-                    src='/hippo-email-sent.png'
+                    src='/513_email.jpeg'
                     fill 
                     alt='the email was sent'
                     />

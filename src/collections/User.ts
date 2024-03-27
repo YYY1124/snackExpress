@@ -25,12 +25,13 @@ export const Users: CollectionConfig={
                 {label:'Admin', value:'admin'},
                 {label:'User',value:'user'},
             ]
-        },{
-            name:"comments",
-            type:"text",
-            label:"comments",
-            required:false,
-        },
+        }
+        // ,{
+        //     name:"comments",
+        //     type:"text",
+        //     label:"comments",
+        //     required:false,
+        // },
         // {
         //     name: "likes",
         //     type: "relationship",

@@ -89,7 +89,7 @@ export default function Cart(){
                 >
                     
                     <Image 
-                        src='/hippo-empty-cart.png'
+                        src='/360_F_560176615_cUua21qgzxDiLiiyiVGYjUnLSGnVLIi6.jpeg'
                         fill
                         alt='emtpy shopping cart hippo'
                     />
