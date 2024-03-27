@@ -59,7 +59,7 @@ const Page=()=>{
                         <div className="flex h0full flex-col items-center justify-center space-y-1">
                             <div aria-hidden='true' className="relative mb-4 h-40 w-40 text-muted-foreground">
                                 <Image 
-                                    src='/hippo-empty-cart.png' 
+                                    src='/360_F_560176615_cUua21qgzxDiLiiyiVGYjUnLSGnVLIi6.jpeg' 
                                     fill
                                     loading='eager'
                                     alt="empty shopping cart hippo"
