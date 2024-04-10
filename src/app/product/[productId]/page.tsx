@@ -184,7 +184,6 @@ const Page = async ({ params }: PageProps) => {
 
     <section className="w-full rounded-lg border-2 border-blue-600 p-4 my-8 mx-auto">
       <h3 className="font-os text-lg font-bold">Comments of this product</h3>
-
       <div className="ml-3">
         {product.comments?.map((comment,id)=>
         <>
@@ -198,9 +197,8 @@ const Page = async ({ params }: PageProps) => {
           <p className="mt-2 font-medium text-black-800"> be the first one to comment!</p>
         }
       </div>
-
       {/* leaving comment */}
-      <CommentHandler />
+      <CommentHandler product={product}/>
     </section>
 
 

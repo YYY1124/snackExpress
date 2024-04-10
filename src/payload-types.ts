@@ -25,7 +25,6 @@ export interface Config {
 export interface User {
   id: string;
   role: 'admin' | 'user';
-  comments?: string | null;
   updatedAt: string;
   createdAt: string;
   email: string;
@@ -50,7 +49,6 @@ export interface Product {
   description?: string | null;
   price: number;
   category:
-    | 'ui_kits'
     | 'chips_and_crisps'
     | 'Cookies_and_Biscuits'
     | 'candy_and_chocolate'

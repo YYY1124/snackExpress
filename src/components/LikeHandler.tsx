@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import { Product } from "../payload-types"
 import { ThumbsDown, ThumbsUp } from "lucide-react"
 import { getPayloadClient } from "@/get-payload"
+import { trpc } from "@/trpc/client"
 
 const LikeHandler=({product}:{product:Product})=>{
     const [isLiked, setIsLiked]=useState<boolean>(false)
@@ -32,10 +33,9 @@ const LikeHandler=({product}:{product:Product})=>{
             setDisLikeStyling("mr-1 h-5 w-5 flex-shrink-0 text-gray-400")
         })
     }
-
+    
     const like=()=>{
-        console.log("test")
-        console.log(product)
+        
         if(isLiked){
             setIsLiked(false)
             setlikeCount(likeCount-1)

@@ -4,10 +4,12 @@ import { publicProcedure, router } from "./trpc";
 import { QueryValidator } from "../lib/query-validator";
 import { getPayloadClient } from "../get-payload";
 import { paymentRouter } from "./payment-router";
+import { commentRouter } from "./comment-router";
 
 export const appRouter = router({
     auth: authRouter,
     payment: paymentRouter,
+    comment:commentRouter,
     getInfiniteProducts: publicProcedure.input(z.object({
         limit: z.number().min(1).max(100),
         //one user can only fetch 1-100 products

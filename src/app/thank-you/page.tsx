@@ -20,7 +20,6 @@ const ThankYouPage= async({ searchParams }: PageProps )=>{
     const nextCookies = cookies()
     //get the cookies as return value
     const {user}=await getServerSiderUser(nextCookies)
-
     const payload= await getPayloadClient()
     const {docs:orders}=await payload.find({
         collection:"orders",

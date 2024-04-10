@@ -11,40 +11,26 @@ export const Users: CollectionConfig={
     },
     access:{
         read:()=>true,
-        create:()=>true,
-
+        create:({req})=>req.user.role ==='admin',
+    },
+    admin:{
+        hidden:({user})=>user.role!=='admin'
+        // if the user is not admin then hide it
     },
     fields:[
         {
             name:'role',
             required:true,
             defaultValue:'user',
-            
+            access:{
+                read: ()=>true,
+                update: ({req})=>req.user.role ==='admin',
+            },
             type:'select',
             options:[
                 {label:'Admin', value:'admin'},
                 {label:'User',value:'user'},
             ]
         }
-        // ,{
-        //     name:"comments",
-        //     type:"text",
-        //     label:"comments",
-        //     required:false,
-        // },
-        // {
-        //     name: "likes",
-        //     type: "relationship",
-        //     relationTo: "products",
-        //     label: "likes",
-        //     required: false,
-        //     access: {
-        //       create: ({ req }) => req.user.role === "admin",
-        //       read: ({ req }) => req.user.role === "admin",
-        //       update: ({ req }) => req.user.role === "admin"
-        //       // Only admin can read, update, and create
-        //     },
-        //     hasMany:true
-        //   },
     ]
 }

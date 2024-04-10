@@ -189,7 +189,7 @@ export const Products: CollectionConfig={
             required: false,
             access: {
               create: ({ req }) => req.user.role === "admin",
-              read: ({ req }) => req.user.role === "admin",
+              read: ()=>true,
               update: ({ req }) => req.user.role === "admin"
               // Only admin can read, update, and create
             },
@@ -202,7 +202,7 @@ export const Products: CollectionConfig={
             required: false,
             access: {
               create: ({ req }) => req.user.role === "admin",
-              read: ({ req }) => req.user.role === "admin",
+              read: ()=>true,
               update: ({ req }) => req.user.role === "admin"
               // Only admin can read, update, and create
             },
@@ -215,7 +215,7 @@ export const Products: CollectionConfig={
             required:false,
             access:{
                 create: ({req})=> req.user.role==="admin",
-                read: ({req})=> req.user.role==="admin",
+                read: ()=>true,
                 update: ({req})=> req.user.role==="admin"
                 //only admin can read, update and create
             },

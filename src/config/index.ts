@@ -26,17 +26,17 @@ export const PRODUCT_CATEGORIES=[
         featured:[
             {
                 name:"Editor picks",
-                href:'#',
+                href:'/products',
                 imageSrc:'/nav/ui-kits/mixed.jpg'
             },
             {
                 name:"New Arrivals",
-                href:'#',
+                href:'/products',
                 imageSrc:'/nav/ui-kits/blue.jpg'
             },
             {
                 name:"Bestsellers",
-                href:'#',
+                href:'/products',
                 imageSrc:'/nav/ui-kits/purple.jpg'
             }
         ]
@@ -46,76 +46,187 @@ export const PRODUCT_CATEGORIES=[
         value:"Cookies_and_Biscuits" as const,
         featured:[
             {
-                name:"Favourite Icon Picks",
-                href:'#',
-                imageSrc:'/nav/icons/picks.jpg'
+                name:"Editor picks",
+                href:'/products',
+                imageSrc:'/nav/ui-kits/mixed.jpg'
             },
             {
                 name:"New Arrivals",
-                href:'#',
-                imageSrc:'/nav/icons/new.jpg'
+                href:'/products',
+                imageSrc:'/nav/ui-kits/blue.jpg'
             },
             {
-                name:"Bestselling icon",
-                href:'#',
-                imageSrc:'/nav/icons/bestsellers.jpg'
-            }
-        ]
+                name:"Bestsellers",
+                href:'/products',
+                imageSrc:'/nav/ui-kits/purple.jpg'
+            }]
     },
     {
         label:"Candy and Chocolate",
         value:"candy_and_chocolate" as const,
         featured:[
-
+            {
+                name:"Editor picks",
+                href:'/products',
+                imageSrc:'/nav/ui-kits/mixed.jpg'
+            },
+            {
+                name:"New Arrivals",
+                href:'/products',
+                imageSrc:'/nav/ui-kits/blue.jpg'
+            },
+            {
+                name:"Bestsellers",
+                href:'/products',
+                imageSrc:'/nav/ui-kits/purple.jpg'
+            }
         ]
     },
     {
         label:"Nuts and Seeds",
         value:"nuts_and_seeds" as const,
         featured:[
-
+            {
+                name:"Editor picks",
+                href:'/products',
+                imageSrc:'/nav/ui-kits/mixed.jpg'
+            },
+            {
+                name:"New Arrivals",
+                href:'/products',
+                imageSrc:'/nav/ui-kits/blue.jpg'
+            },
+            {
+                name:"Bestsellers",
+                href:'/products',
+                imageSrc:'/nav/ui-kits/purple.jpg'
+            }
         ]
     },
     {
         label:"Popcorn",
         value:"popcorn" as const,
         featured:[
-
+            {
+                name:"Editor picks",
+                href:'/products',
+                imageSrc:'/nav/ui-kits/mixed.jpg'
+            },
+            {
+                name:"New Arrivals",
+                href:'/products',
+                imageSrc:'/nav/ui-kits/blue.jpg'
+            },
+            {
+                name:"Bestsellers",
+                href:'/products',
+                imageSrc:'/nav/ui-kits/purple.jpg'
+            }
         ]
     },
     {
         label:"Crackers",
         value:"cracks" as const,
         featured:[
-
+            {
+                name:"Editor picks",
+                href:'/products',
+                imageSrc:'/nav/ui-kits/mixed.jpg'
+            },
+            {
+                name:"New Arrivals",
+                href:'/products',
+                imageSrc:'/nav/ui-kits/blue.jpg'
+            },
+            {
+                name:"Bestsellers",
+                href:'/products',
+                imageSrc:'/nav/ui-kits/purple.jpg'
+            }
         ]
     },
     {
         label:"Pretzels",
         value:"pretzels" as const,
         featured:[
-
+            {
+                name:"Editor picks",
+                href:'/products',
+                imageSrc:'/nav/ui-kits/mixed.jpg'
+            },
+            {
+                name:"New Arrivals",
+                href:'/products',
+                imageSrc:'/nav/ui-kits/blue.jpg'
+            },
+            {
+                name:"Bestsellers",
+                href:'/products',
+                imageSrc:'/nav/ui-kits/purple.jpg'
+            }
         ]
     },
     {
         label:"Dried Fruits",
         value:"dried_fruits" as const,
         featured:[
-
+            {
+                name:"Editor picks",
+                href:'/products',
+                imageSrc:'/nav/ui-kits/mixed.jpg'
+            },
+            {
+                name:"New Arrivals",
+                href:'/products',
+                imageSrc:'/nav/ui-kits/blue.jpg'
+            },
+            {
+                name:"Bestsellers",
+                href:'/products',
+                imageSrc:'/nav/ui-kits/purple.jpg'
+            }
         ]
     },
     {
         label:"Granola Bars and Energy Bars",
         value:"granola_bars_and_energy_bars" as const,
         featured:[
-
+            {
+                name:"Editor picks",
+                href:'/products',
+                imageSrc:'/nav/ui-kits/mixed.jpg'
+            },
+            {
+                name:"New Arrivals",
+                href:'/products',
+                imageSrc:'/nav/ui-kits/blue.jpg'
+            },
+            {
+                name:"Bestsellers",
+                href:'/products',
+                imageSrc:'/nav/ui-kits/purple.jpg'
+            }
         ]
     },
     {
         label:"Jerky",
         value:"jerky" as const,
         featured:[
-
+            {
+                name:"Editor picks",
+                href:'/products',
+                imageSrc:'/nav/ui-kits/mixed.jpg'
+            },
+            {
+                name:"New Arrivals",
+                href:'/products',
+                imageSrc:'/nav/ui-kits/blue.jpg'
+            },
+            {
+                name:"Bestsellers",
+                href:'/products',
+                imageSrc:'/nav/ui-kits/purple.jpg'
+            }
         ]
     },
 ]
