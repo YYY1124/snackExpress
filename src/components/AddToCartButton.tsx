@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import { Button } from "./ui/button"
 import { UseCart } from "@/hooks/use-cart"
 import { Product } from "@/payload-types"
+import { toast } from "sonner"
 
 const AddToCartButton =({product}:{product:Product})=>{
     const { addItem } = UseCart()
@@ -16,17 +17,22 @@ const AddToCartButton =({product}:{product:Product})=>{
         return ()=>clearTimeout(timeout)
     },[])
     //record timeout of the button
+
+    function onClickhandler(){
+        if(product.stocks>0){
+            if(!isSuccess){
+                setIsSuccess(true)
+                addItem(product)}
+        }else{
+            toast.error("It is out of stock!")
+        }
+    }
+
     return (
     <Button 
         size='lg' 
         className='w-full'
-        onClick={()=>
-            {
-                if(!isSuccess){
-                setIsSuccess(true)
-                addItem(product)}
-                //passing product in shopping cart
-            }
+        onClick={onClickhandler
         }    
     >
     {isSuccess ? "Added!" : "Add to cart"}
