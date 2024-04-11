@@ -54,12 +54,6 @@ export const Orders: CollectionConfig={
             required:true,
             hasMany:true,
             //one order can have many products
-        },
-        {
-            name:"stocks",
-            type:"number",
-            required:true,
-            hasMany:false
         }
     ]
 }
