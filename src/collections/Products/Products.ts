@@ -3,6 +3,18 @@ import { PRODUCT_CATEGORIES } from "../../config";
 import { CollectionConfig } from "payload/types";
 import { Product } from "../..//payload-types";
 import { stripe } from '../../lib/stripe';
+import { Access } from "payload/types";
+
+const yourOwn:Access=({req:{user}})=>{
+    if(user.role==="admin") return true
+
+    return{
+        user:{
+            equals:user?.id
+            //same id means same person
+        }
+    }
+}
 
 const addUser: BeforeChangeHook<Product> = async ({
     req,
@@ -20,6 +32,7 @@ export const Products: CollectionConfig={
     },
     access:{
         // read: ({ req }) => req.user.role === "admin" 
+        read:yourOwn,
     },
     //who can access
     hooks:{
