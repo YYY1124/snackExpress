@@ -70,6 +70,7 @@ export interface Product {
   likes?: (string | User)[] | null;
   dislikes?: (string | User)[] | null;
   comments?: string[] | null;
+  stocks: number;
   updatedAt: string;
   createdAt: string;
 }

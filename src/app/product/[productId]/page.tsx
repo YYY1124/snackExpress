@@ -150,11 +150,16 @@ const Page = async ({ params }: PageProps) => {
             <div>
                 <div className='mt-10'>
                     {/* add to cart */}
-                    <AddToCartButton product={product}/>
+                    {product.stocks?<AddToCartButton product={product}/>:null}
                    
                 </div>
                 <div className='mt-6 text-center'>
                     <div className='group inline-flex text-sm text-medium'>
+
+                        <p className='text-muted-foreground hover: text-gray-700 mr-7'>
+                            number of stock: {product.stocks||0}
+                        </p>
+                
                       
                         <Shield
                             aria-hidden='true'
@@ -163,6 +168,7 @@ const Page = async ({ params }: PageProps) => {
                         <span className='text-muted-foreground hover: text-gray-700'>
                             300 Day Return Guarantee
                         </span>
+                        
                     </div>
                 </div>
 

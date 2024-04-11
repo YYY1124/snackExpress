@@ -236,5 +236,11 @@ export const Products: CollectionConfig={
             hasMany:true,
             
         },
+        {
+            name:"stocks",
+            type:"number",
+            required:true,
+            hasMany:false
+        }
     ],
 }
