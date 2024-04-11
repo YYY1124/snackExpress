@@ -170,36 +170,19 @@ const Page = async ({ params }: PageProps) => {
                   <LikeHandler product={product}/>
                   {/* <p className='mr-2 text-gray-600 space-x-4'> {likeCount}</p> */}
                   
-                    <button 
+                    {/* <button 
                       className='group inline-flex text-muted-foreground'
                     >
                       <MessageCircle className='ml-8 mr-1 flex-shrink-0 text-gray-400' />
                       <p className='text-muted-foreground hover: text-gray-700'>Dm them</p>
-                   </button>
+                   </button> */}
                 </div>
             </div>
           </div>
         </div>
       </div>
 
-    <section className="w-full rounded-lg border-2 border-blue-600 p-4 my-8 mx-auto">
-      <h3 className="font-os text-lg font-bold">Comments of this product</h3>
-      <div className="ml-3">
-        {product.comments?.map((comment,id)=>
-        <>
-          <div className="mt-2 font-medium text-blue-800">Hiddened Name</div>
-          {/* <div className="text-gray-600">Posted on 2023-10-02 14:30</div> */}
-          <p className="text-gray-900">
-            {comment}
-          </p>
-          </>)
-        ||
-          <p className="mt-2 font-medium text-black-800"> be the first one to comment!</p>
-        }
-      </div>
-      {/* leaving comment */}
-      <CommentHandler product={product}/>
-    </section>
+    <CommentHandler product={product}/>
 
 
     {/* recommend products which is showing same category items  */}

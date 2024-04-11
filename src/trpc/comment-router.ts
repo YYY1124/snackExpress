@@ -15,7 +15,6 @@ export const commentRouter = router({
   ).mutation(async ({ ctx, input }) => {
     const { user } = ctx;
     const { productId, text } = input;
-
     if (productId.length === 0) {
       throw new TRPCError({ code: 'BAD_REQUEST' });
       // If no id, then no user, then calling API unsuccessful
@@ -26,7 +25,7 @@ export const commentRouter = router({
     const product = await payload.find({
       collection: 'products',
       where: {
-        id: { in: [productId]}, // Wrap productId in an array
+        id: { in: productId }, // Wrap productId in an array
       },
     });
     
@@ -36,7 +35,7 @@ export const commentRouter = router({
 
     const updatedProduct = await payload.update({
       collection: 'products',
-      where: { id: { in: [productId] } }, // Wrap productId in an array
+      where: { id: { in: productId } }, // Wrap productId in an array
       data: {
         comments: [text],
       },

@@ -14,35 +14,61 @@ const CommentHandler=({product}:{product:Product})=>{
 
   //use API to add comment to a product
 
-  // const result = trpc.comment.createSession.useMutation({
-  //   productId:product.id,
-  //   text:text
+  
+  // const { mutate: createSession } = trpc.comment.createSession.useMutation(
+  //   {
+  //     onSuccess:()=>{
+  //       toast.success(`Comment Successfully`)
+  //     },
+  //     onError:(err)=>{
+  //       if(err.data?.code==='UNAUTHORIZED'){
+  //           toast.error('please login before comment')
+  //       }
+  //      }
   //   }
-  // )
-  const { mutate: createSession } = trpc.comment.createSession.useMutation();
+  // );
 
-
+  const [comments,setComments]=useState(product.comments)
   
   const SubmitCommentHandler = () => {
-    try {
-      createSession({
-        productId: product.id,
-        text: text,
-      })
-      event?.preventDefault();
-    } catch (error) {
-      // Handle error
-      console.log(error);
-    }
+    // try {
+    //   createSession({
+    //     productId: product.id,
+    //     text: text,
+    //     }
+    //   )
+    //   event?.preventDefault()
+    // } catch (error) {
+    //   // Handle error
+    //   console.log(error);
+    // }
+    comments?.push(text)
+    event?.preventDefault()
+    setText("")
   }
   
   const ChangeHandler = (event:any) => {
     setText(event.target.value)
   };
   
-  
   return (
-  <form 
+    <section className="w-full rounded-lg border-2 border-blue-600 p-4 my-8 mx-auto">
+      <h3 className="font-os text-lg font-bold">Comments of this product</h3>
+      <div className="ml-3">
+        {comments?.map((comment,id)=>
+        <>
+          <div className="mt-2 font-medium text-blue-800">Hiddened Name</div>
+          {/* <div className="text-gray-600">Posted on 2023-10-02 14:30</div> */}
+          <p className="text-gray-900">
+            {comment}
+          </p>
+          </>)
+        ||
+          <p className="mt-2 font-medium text-black-800"> be the first one to comment!</p>
+        }
+      </div>
+      {/* leaving comment */}
+      <form 
     className="mt-4"
     onSubmit={SubmitCommentHandler}  
   >
@@ -61,7 +87,9 @@ const CommentHandler=({product}:{product:Product})=>{
     >
       Post Comment
     </button>
-  </form> )
+    </form> 
+  </section>
+  )
 }
 
 export default CommentHandler

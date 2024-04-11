@@ -18,7 +18,9 @@ export const Products: CollectionConfig={
     admin:{
         useAsTitle:"name"
     },
-    access:{},
+    access:{
+        // read: ({ req }) => req.user.role === "admin" 
+    },
     //who can access
     hooks:{
         beforeChange:[
@@ -55,8 +57,7 @@ export const Products: CollectionConfig={
                         ...data,
                         stripeId: updatedProduct.id,
                         priceId: updatedProduct.default_price as string 
-                    }
-                    
+                    }     
                 }
             }
         ]
